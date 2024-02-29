@@ -19,15 +19,11 @@ const getUsersWithFriend = (users, friendName) => {
   const includesFriendsArray = users.filter(user => {
     const friends = user.friends
 
-    if (friends.includes(friendName)) {
-      return true
-    }
+    return friends.includes(friendName);
   })
-
-  return includesFriendsArray.map(user => user.name)
+  
+  return includesFriendsArray
 }
-
-
 
 
 const allUsers = [
